@@ -10,9 +10,9 @@
     - cover: cover image filename
   */
   const sections = [
-    { key: "campus_life", title: "Campus Life", folder: "campus_life", prefix: "campus_", count: 46, cover: "campus_1.jpg" },
-    { key: "school_trip", title: "School Trip", folder: "school_trip", prefix: "trip_", count: 26, cover: "trip_1.jpg" },
-    { key: "admission", title: "Admission", folder: "admission", prefix: "admission_", count: 4, cover: "admission_1.jpg" },
+    { key: "campus_life", title: "Campus Life", folder: "campus_life", prefix: "campus_", count: 37, cover: "campus_1.jpg" },
+    { key: "school_trip", title: "School Trip", folder: "school_trip", prefix: "trip_", count: 25, cover: "trip_1.jpg" },
+    { key: "admission", title: "Admission", folder: "admission", prefix: "admission_", count: 1, cover: "admission_1.jpg" },
     { key: "christmas", title: "Christmas", folder: "christmas", prefix: "christmas_", count: 22, cover: "christmas_1.jpg" },
     { key: "teachers_day", title: "Teachers Day", folder: "teachers_day", prefix: "teachers_day_", count: 4, cover: "teachers_day_1.jpg" },
     { key: "flower_day", title: "Flower Day", folder: "flower_day", prefix: "flower_day_", count: 7, cover: "flower_day_1.jpg" }
