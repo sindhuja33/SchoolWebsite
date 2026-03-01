@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | School Gallery</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="events">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">Santhidam Bethania Matriculation School</a>
+      <nav class="top-nav">
+        <a href="gallery.html">Gallery Home</a>
+        <a href="../index.html">Main Website</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    <section class="section-head fade-in">
+      <a class="back-link" href="gallery.html">&larr; Back to Gallery</a>
+      <p class="eyebrow">Event Collection</p>
+      <h1>School Events</h1>
+      <p>Select a celebration to view photos.</p>
+    </section>
+
+    <section class="event-filters">
+      <button class="event-btn active" data-event="christmas">Christmas</button>
+      <button class="event-btn" data-event="teachers_day">Teachers Day</button>
+      <button class="event-btn" data-event="flower_day">Flower Day</button>
+    </section>
+
+    <section id="galleryGrid" class="image-grid"></section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous image">&#10094;</button>
+    <img id="lightboxImage" src="" alt="Gallery preview" />
+    <button id="lightboxNext" class="lightbox-nav next" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
