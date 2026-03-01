@@ -92,4 +92,48 @@
       }
     });
   }
+
+  const counters = document.querySelectorAll(".counter[data-target]");
+  if (counters.length) {
+    const animateCounter = function (counter) {
+      const target = Number(counter.dataset.target);
+      if (!Number.isFinite(target) || target < 0) return;
+
+      const duration = 1400;
+      const startTime = performance.now();
+
+      const frame = function (currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(target * eased);
+        counter.textContent = String(value);
+
+        if (progress < 1) {
+          requestAnimationFrame(frame);
+        } else {
+          counter.textContent = String(target);
+        }
+      };
+
+      requestAnimationFrame(frame);
+    };
+
+    const observer = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.45 }
+    );
+
+    counters.forEach(function (counter) {
+      counter.textContent = "0";
+      observer.observe(counter);
+    });
+  }
 })();
