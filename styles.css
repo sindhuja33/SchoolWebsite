@@ -1,15 +1,15 @@
 :root {
-  --primary: #0f766e;
-  --primary-dark: #115e59;
-  --accent: #ea580c;
-  --text: #1f2937;
-  --muted: #475569;
-  --bg: #f5f7f8;
+  --primary: #2d35a6;
+  --primary-dark: #1f2d86;
+  --accent: #e0c419;
+  --text: #172554;
+  --muted: #334155;
+  --bg: #eef5ff;
   --surface: #ffffff;
-  --border: #d1e4e2;
+  --border: #c9daef;
   --max-width: 1120px;
   --radius: 16px;
-  --shadow: 0 14px 30px rgba(15, 118, 110, 0.12);
+  --shadow: 0 14px 30px rgba(45, 53, 166, 0.16);
 }
 
 * {
@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", "Trebuchet MS", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 0% 0%, #ecfdf5 0%, #f6f9fb 42%, #eef6ff 100%);
+  background: radial-gradient(circle at 0% 0%, #e8f4ff 0%, #f5faff 44%, #eef2ff 100%);
   line-height: 1.65;
 }
 
@@ -48,7 +48,7 @@ img {
   top: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid #dbe8e6;
+  border-bottom: 1px solid #d2e1f4;
   backdrop-filter: blur(8px);
 }
 
@@ -71,7 +71,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 2px solid #8ed3cb;
+  border: 2px solid #48b4ea;
   object-fit: cover;
 }
 
@@ -112,7 +112,7 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), #14b8a6);
+  background: linear-gradient(135deg, var(--primary), #20a9e6);
 }
 
 .hero {
@@ -145,7 +145,7 @@ img {
   margin-bottom: 0.9rem;
   padding: 0.35rem 0.76rem;
   border-radius: 999px;
-  background: #ddf8f4;
+  background: #fff4b5;
   color: var(--primary-dark);
   font-size: 0.8rem;
   font-weight: 800;
@@ -181,12 +181,12 @@ img {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--primary), #14b8a6);
+  background: linear-gradient(135deg, var(--primary), #20a9e6);
 }
 
 .btn-ghost {
   color: var(--primary-dark);
-  border-color: #8ed3cb;
+  border-color: #7ec8ef;
   background: #fff;
 }
 
@@ -206,8 +206,8 @@ img {
 
 .stat {
   border-radius: 12px;
-  border: 1px solid #c7e7e3;
-  background: #f2fdfa;
+  border: 1px solid #c5ddf8;
+  background: #f4f9ff;
   padding: 0.8rem;
 }
 
@@ -254,7 +254,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.1rem;
-  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.08);
+  box-shadow: 0 8px 20px rgba(45, 53, 166, 0.1);
 }
 
 .card h3 {
@@ -278,7 +278,7 @@ img {
 }
 
 .band {
-  background: linear-gradient(135deg, #115e59 0%, #0f766e 50%, #0ea5a4 100%);
+  background: linear-gradient(135deg, #1f2d86 0%, #2d35a6 50%, #20a9e6 100%);
   color: #fff;
 }
 
@@ -294,19 +294,19 @@ img {
 }
 
 .mission-highlight {
-  background: linear-gradient(120deg, #fff7ed 0%, #fffaf4 45%, #ffffff 100%);
+  background: linear-gradient(120deg, #fffce9 0%, #fff6e6 45%, #ffffff 100%);
 }
 
 .mission-highlight .card {
-  border-color: #fed7aa;
-  box-shadow: 0 8px 22px rgba(234, 88, 12, 0.1);
+  border-color: #f4e48b;
+  box-shadow: 0 8px 22px rgba(224, 196, 25, 0.2);
 }
 
 .mission-quote {
   margin-top: 1rem;
   margin-bottom: 0;
   font-weight: 700;
-  color: #9a3412;
+  color: #b91c1c;
 }
 
 .text-link {
@@ -346,7 +346,7 @@ img {
 }
 
 .filter-btn {
-  border: 1px solid #99d8cf;
+  border: 1px solid #8fcbef;
   color: var(--primary-dark);
   background: #fff;
   border-radius: 999px;
@@ -387,7 +387,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem;
-  box-shadow: 0 8px 20px rgba(15, 118, 110, 0.08);
+  box-shadow: 0 8px 20px rgba(45, 53, 166, 0.1);
 }
 
 .campus-slider {
@@ -400,7 +400,7 @@ img {
 .campus-slide-window {
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid #bfe3de;
+  border: 1px solid #c5ddf8;
   cursor: pointer;
 }
 
@@ -424,7 +424,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid #99d8cf;
+  border: 1px solid #8fcbef;
   background: #ffffff;
   color: var(--primary-dark);
   font-size: 1.15rem;
@@ -445,12 +445,12 @@ img {
   height: 9px;
   border-radius: 50%;
   border: 0;
-  background: #9ccbc5;
+  background: #92c8ea;
   cursor: pointer;
 }
 
 .campus-dot.active {
-  background: #0f766e;
+  background: var(--primary);
 }
 
 .campus-toggle {
@@ -466,7 +466,7 @@ img {
 .campus-tile {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #bfe3de;
+  border: 1px solid #c5ddf8;
 }
 
 .campus-tile img {
@@ -527,8 +527,8 @@ textarea {
 
 .site-footer {
   margin-top: 2.2rem;
-  background: #0f172a;
-  color: #cbd5e1;
+  background: #182a7a;
+  color: #e5ecfb;
   padding: 2rem 0;
 }
 
@@ -544,7 +544,7 @@ textarea {
 }
 
 .site-footer a {
-  color: #e2e8f0;
+  color: #f4f8ff;
 }
 
 .footer-note {

@@ -1,12 +1,12 @@
 :root {
-  --primary: #0f766e;
-  --primary-dark: #115e59;
-  --text: #1f2937;
-  --muted: #475569;
-  --border: #dbe6ea;
+  --primary: #2d35a6;
+  --primary-dark: #1f2d86;
+  --text: #172554;
+  --muted: #334155;
+  --border: #c9daef;
   --surface: #ffffff;
   --radius: 16px;
-  --shadow: 0 12px 28px rgba(15, 118, 110, 0.12);
+  --shadow: 0 12px 28px rgba(45, 53, 166, 0.16);
   --max-width: 1120px;
 }
 
@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", "Trebuchet MS", sans-serif;
   color: var(--text);
-  background: #ffffff;
+  background: radial-gradient(circle at 0% 0%, #e8f4ff 0%, #f5faff 44%, #eef2ff 100%);
   line-height: 1.6;
 }
 
@@ -42,7 +42,7 @@ img {
   top: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid #dbe8e6;
+  border-bottom: 1px solid #d2e1f4;
   backdrop-filter: blur(8px);
 }
 
@@ -64,7 +64,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: var(--primary-dark);
-  background: #dff5f1;
+  background: #fff4b5;
 }
 
 h1 {
@@ -160,7 +160,7 @@ p {
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.08);
+  box-shadow: 0 8px 18px rgba(45, 53, 166, 0.1);
   cursor: pointer;
 }
 
@@ -200,7 +200,7 @@ p {
   position: absolute;
   border: 0;
   color: #fff;
-  background: rgba(15, 23, 42, 0.68);
+  background: rgba(31, 45, 134, 0.72);
   cursor: pointer;
 }
 
