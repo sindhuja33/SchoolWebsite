@@ -3,47 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Santhidam Bethania Matriculation School</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Gallery Photos | Santhidam Bethania Matriculation School</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body data-page="home">
+<body data-page="gallery">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html">Santhidam Bethania Matriculation School</a>
       <nav class="top-nav">
-        <a class="active" href="gallery.html">Gallery Home</a>
+        <a href="index.html">Gallery</a>
         <a href="../index.html">Main Website</a>
       </nav>
     </div>
   </header>
 
   <main class="container page-main">
-    <section class="hero fade-in">
-      <p class="eyebrow">School Gallery</p>
-      <h1>Explore Our School Memories</h1>
-      <p>Choose a category to open photo collections with lightbox preview.</p>
+    <section class="hero">
+      <a class="back-link" href="index.html">&larr; Back to Sections</a>
+      <p class="eyebrow">Photo Collection</p>
+      <h1 id="sectionTitle">Gallery Photos</h1>
+      <p id="sectionDescription">All photos in this section.</p>
     </section>
 
-    <section class="category-grid" aria-label="Gallery Sections">
-      <a class="category-card fade-in" href="campus.html">
-        <h2>Campus Life</h2>
-        <p>Daily learning spaces, campus atmosphere, and school environment.</p>
-      </a>
-      <a class="category-card fade-in" href="school_trip.html">
-        <h2>School Trip</h2>
-        <p>Educational tours, outdoor learning, and student travel moments.</p>
-      </a>
-      <a class="category-card fade-in" href="admission.html">
-        <h2>Admission</h2>
-        <p>Admission updates, campaigns, and school joining highlights.</p>
-      </a>
-      <a class="category-card fade-in" href="events.html">
-        <h2>Events</h2>
-        <p>Christmas, Teachers Day, Flower Day, and celebrations.</p>
-      </a>
-    </section>
+    <section id="photoGrid" class="photo-grid" aria-label="Section Photos"></section>
   </main>
 
-  <script src="js/gallery.js"></script>
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Close slideshow">&times;</button>
+    <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous photo">&#10094;</button>
+    <img id="lightboxImage" src="" alt="Slideshow image" />
+    <button id="lightboxNext" class="lightbox-nav next" aria-label="Next photo">&#10095;</button>
+  </div>
+
+  <script src="gallery.js"></script>
 </body>
 </html>
