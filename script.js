@@ -47,6 +47,122 @@
     });
   }
 
+  const campusSlider = document.getElementById("campusSlider");
+  if (campusSlider) {
+    const slideTrack = document.getElementById("campusSlideTrack");
+    const slideWindow = document.getElementById("campusSlideWindow");
+    const slides = slideTrack ? Array.from(slideTrack.querySelectorAll(".campus-slide")) : [];
+    const prevBtn = campusSlider.querySelector(".campus-prev");
+    const nextBtn = campusSlider.querySelector(".campus-next");
+    const dotsWrap = document.getElementById("campusDots");
+    const tilesWrap = document.getElementById("campusTiles");
+    const toggleBtn = document.getElementById("campusToggle");
+    let activeIndex = 0;
+    let timer = null;
+
+    const renderTiles = function () {
+      if (!tilesWrap || tilesWrap.childElementCount || !slides.length) return;
+      slides.forEach(function (slide, index) {
+        const image = slide.querySelector("img");
+        if (!image) return;
+        const tile = document.createElement("article");
+        tile.className = "campus-tile";
+        const tileImg = document.createElement("img");
+        tileImg.src = image.getAttribute("src");
+        tileImg.alt = image.getAttribute("alt") || "Campus photo " + (index + 1);
+        tile.appendChild(tileImg);
+        tilesWrap.appendChild(tile);
+      });
+    };
+
+    const toggleTiles = function (show) {
+      if (!tilesWrap || !toggleBtn) return;
+      const isVisible = typeof show === "boolean" ? show : tilesWrap.hasAttribute("hidden");
+      if (isVisible) {
+        renderTiles();
+        tilesWrap.removeAttribute("hidden");
+        toggleBtn.textContent = "Hide Campus Photos";
+      } else {
+        tilesWrap.setAttribute("hidden", "");
+        toggleBtn.textContent = "Show All Campus Photos";
+      }
+    };
+
+    const updateSlide = function () {
+      if (!slideTrack || !slides.length) return;
+      slideTrack.style.transform = "translateX(-" + activeIndex * 100 + "%)";
+      if (dotsWrap) {
+        Array.from(dotsWrap.querySelectorAll(".campus-dot")).forEach(function (dot, index) {
+          dot.classList.toggle("active", index === activeIndex);
+        });
+      }
+    };
+
+    const goToSlide = function (index) {
+      if (!slides.length) return;
+      activeIndex = (index + slides.length) % slides.length;
+      updateSlide();
+    };
+
+    const startAutoPlay = function () {
+      if (timer || slides.length < 2) return;
+      timer = setInterval(function () {
+        goToSlide(activeIndex + 1);
+      }, 3200);
+    };
+
+    const stopAutoPlay = function () {
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;
+    };
+
+    if (dotsWrap && slides.length) {
+      slides.forEach(function (_, index) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "campus-dot";
+        dot.setAttribute("aria-label", "Go to campus photo " + (index + 1));
+        dot.addEventListener("click", function () {
+          goToSlide(index);
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        goToSlide(activeIndex - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        goToSlide(activeIndex + 1);
+      });
+    }
+
+    if (slideWindow) {
+      slideWindow.addEventListener("click", function () {
+        toggleTiles(true);
+      });
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", function () {
+        toggleTiles();
+      });
+    }
+
+    campusSlider.addEventListener("mouseenter", stopAutoPlay);
+    campusSlider.addEventListener("mouseleave", startAutoPlay);
+    campusSlider.addEventListener("focusin", stopAutoPlay);
+    campusSlider.addEventListener("focusout", startAutoPlay);
+
+    updateSlide();
+    startAutoPlay();
+  }
+
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     const success = document.getElementById("formSuccess");

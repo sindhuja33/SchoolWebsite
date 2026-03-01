@@ -15,6 +15,38 @@
 
     <section class="section">
       <div class="container">
+        <div class="section-head">
+          <h2>Campus Infrastructure</h2>
+          <p>Slideshow preview of our campus. Click the slideshow or use the button to open all campus photos in a responsive tile view.</p>
+        </div>
+
+        <div class="campus-gallery" id="campusGallery">
+          <div class="campus-slider" id="campusSlider">
+            <button class="campus-nav campus-prev" type="button" aria-label="Previous campus photo">&#10094;</button>
+            <div class="campus-slide-window" id="campusSlideWindow" title="Click to view all photos">
+              <div class="campus-slide-track" id="campusSlideTrack">
+                <figure class="campus-slide"><img src="images/Campus/WhatsApp%20Image%202026-03-01%20at%2010.37.55%20(2).jpeg" alt="Campus infrastructure photo 1" /></figure>
+                <figure class="campus-slide"><img src="images/Campus/WhatsApp%20Image%202026-03-01%20at%2010.37.55%20(3).jpeg" alt="Campus infrastructure photo 2" /></figure>
+                <figure class="campus-slide"><img src="images/Campus/WhatsApp%20Image%202026-03-01%20at%2010.37.56%20(1).jpeg" alt="Campus infrastructure photo 3" /></figure>
+                <figure class="campus-slide"><img src="images/Campus/WhatsApp%20Image%202026-03-01%20at%2010.43.28%20(3).jpeg" alt="Campus infrastructure photo 4" /></figure>
+                <figure class="campus-slide"><img src="images/Campus/WhatsApp%20Image%202026-03-01%20at%2010.55.02%20(1).jpeg" alt="Campus infrastructure photo 5" /></figure>
+                <figure class="campus-slide"><img src="images/Campus/WhatsApp%20Image%202026-03-01%20at%2010.55.02.jpeg" alt="Campus infrastructure photo 6" /></figure>
+              </div>
+            </div>
+            <button class="campus-nav campus-next" type="button" aria-label="Next campus photo">&#10095;</button>
+          </div>
+
+          <div class="campus-dots" id="campusDots"></div>
+
+          <button class="btn btn-ghost campus-toggle" id="campusToggle" type="button">Show All Campus Photos</button>
+
+          <div class="campus-tiles" id="campusTiles" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
         <div class="gallery-controls">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="academics">Academics</button>
