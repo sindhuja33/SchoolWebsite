@@ -26,6 +26,56 @@
     }
   });
 
+  const flyer = document.getElementById("admissionFlyer");
+  if (flyer) {
+    const dismissKey = "admissionFlyerDismissedUntil";
+    const dontShowCheckbox = document.getElementById("flyerDontShowToday");
+    const closeButtons = flyer.querySelectorAll("[data-flyer-close]");
+
+    const closeFlyer = function (saveForToday) {
+      if (saveForToday) {
+        try {
+          const oneDay = 24 * 60 * 60 * 1000;
+          localStorage.setItem(dismissKey, String(Date.now() + oneDay));
+        } catch (error) {
+          // Ignore storage errors and continue closing the modal.
+        }
+      }
+      flyer.classList.remove("open");
+      flyer.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    const openFlyer = function () {
+      flyer.classList.add("open");
+      flyer.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    let dismissedUntil = 0;
+    try {
+      dismissedUntil = Number(localStorage.getItem(dismissKey) || 0);
+    } catch (error) {
+      dismissedUntil = 0;
+    }
+
+    if (Date.now() >= dismissedUntil) {
+      window.setTimeout(openFlyer, 350);
+    }
+
+    closeButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        closeFlyer(Boolean(dontShowCheckbox && dontShowCheckbox.checked));
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && flyer.classList.contains("open")) {
+        closeFlyer(false);
+      }
+    });
+  }
+
   const filterButtons = document.querySelectorAll(".filter-btn");
   const galleryItems = document.querySelectorAll(".gallery-item");
 
