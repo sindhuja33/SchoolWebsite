@@ -259,6 +259,32 @@
     });
   }
 
+  const revealItems = document.querySelectorAll(".reveal");
+  if (revealItems.length) {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      revealItems.forEach(function (item) {
+        item.classList.add("is-visible");
+      });
+    } else {
+      const revealObserver = new IntersectionObserver(
+        function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+    }
+  }
+
   const counters = document.querySelectorAll(".counter[data-target]");
   if (counters.length) {
     const animateCounter = function (counter) {
