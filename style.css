@@ -251,6 +251,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px; /* reduce spacing */
+  align-items: start;
 }
 
 .site-footer h4 {
@@ -285,6 +286,10 @@ p {
   width: 100%;
   height: 150px; /* reduce map height */
   border: 0;
+}
+
+.footer-map {
+  align-self: start;
 }
 
 /* FOOTER NOTE */

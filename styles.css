@@ -278,6 +278,7 @@ img {
 }
 
 .card-body {
+  padding-left: 1.1rem;
   padding-top: 0.9rem;
 }
 
@@ -628,6 +629,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
+  align-items: start;
 }
 
 .site-footer h4 {
@@ -671,6 +673,7 @@ textarea {
 }
 
 .footer-map {
+  align-self: start;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(244, 248, 255, 0.25);
