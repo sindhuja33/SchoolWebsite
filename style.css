@@ -235,3 +235,8 @@ p {
     min-height: 260px;
   }
 }
+.success-msg {
+  margin-top: 10px;
+  font-weight: 600;
+  display: none;
+}
