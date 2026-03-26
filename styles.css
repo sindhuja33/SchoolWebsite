@@ -626,7 +626,7 @@ textarea {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -671,7 +671,6 @@ textarea {
 }
 
 .footer-map {
-  margin-top: 1rem;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(244, 248, 255, 0.25);
