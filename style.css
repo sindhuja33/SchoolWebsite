@@ -8,6 +8,11 @@
   --radius: 16px;
   --shadow: 0 12px 28px rgba(45, 53, 166, 0.16);
   --max-width: 1120px;
+  /* Animation tokens (subtle + consistent) */
+  --ease-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --anim-fast: 160ms;
+  --anim-med: 260ms;
+  --anim-slow: 420ms;
 }
 
 * {
@@ -101,6 +106,8 @@ p {
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .gallery-tile::after {
@@ -142,7 +149,8 @@ p {
   padding: 0.58rem 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.25s ease, transform 0.25s ease;
+  /* Animation: micro interaction */
+  transition: background var(--anim-fast) var(--ease-smooth), transform var(--anim-fast) var(--ease-smooth), box-shadow var(--anim-fast) var(--ease-smooth);
 }
 
 .tile-btn:hover {
@@ -162,13 +170,16 @@ p {
   border: 1px solid var(--border);
   box-shadow: 0 8px 18px rgba(45, 53, 166, 0.1);
   cursor: pointer;
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .photo-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  /* Animation: soft zoom */
+  transition: transform var(--anim-slow) var(--ease-smooth);
 }
 
 .photo-card:hover img {
@@ -187,12 +198,16 @@ p {
 
 .lightbox.open {
   display: flex;
+  /* Animation: fade in */
+  animation: lightbox-fade var(--anim-med) var(--ease-smooth);
 }
 
 .lightbox img {
   max-width: min(94vw, 1120px);
   max-height: 88vh;
   border-radius: 12px;
+  /* Animation: soft pop */
+  animation: lightbox-zoom var(--anim-med) var(--ease-smooth);
 }
 
 .lightbox-close,
@@ -202,6 +217,8 @@ p {
   color: #fff;
   background: rgba(31, 45, 134, 0.72);
   cursor: pointer;
+  /* Animation: hover + press */
+  transition: transform var(--anim-fast) var(--ease-smooth), box-shadow var(--anim-fast) var(--ease-smooth), background var(--anim-fast) var(--ease-smooth);
 }
 
 .lightbox-close {
@@ -230,9 +247,80 @@ p {
   right: 12px;
 }
 
+/* Animation: lightbox entry */
+@keyframes lightbox-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightbox-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Interaction states (hover-enabled devices only) */
+@media (hover: hover) {
+  .gallery-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(45, 53, 166, 0.18);
+  }
+
+  .tile-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+  }
+
+  .photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 28px rgba(45, 53, 166, 0.16);
+  }
+
+  .photo-card:hover img {
+    transform: scale(1.08);
+  }
+
+  .lightbox-close:hover,
+  .lightbox-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Animation: pressed state */
+.tile-btn:active,
+.lightbox-close:active,
+.lightbox-nav:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 760px) {
   .gallery-tile {
     min-height: 260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Respect reduced motion for all added animations */
+  .gallery-tile,
+  .tile-btn,
+  .photo-card,
+  .photo-card img,
+  .lightbox,
+  .lightbox img,
+  .lightbox-close,
+  .lightbox-nav {
+    animation: none !important;
+    transition: none !important;
   }
 }
 .success-msg {

@@ -10,6 +10,11 @@
   --max-width: 1120px;
   --radius: 16px;
   --shadow: 0 14px 30px rgba(45, 53, 166, 0.16);
+  /* Animation tokens (subtle + consistent) */
+  --ease-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --anim-fast: 160ms;
+  --anim-med: 260ms;
+  --anim-slow: 420ms;
 }
 
 * {
@@ -83,6 +88,8 @@ img {
   width: 42px;
   height: 42px;
   cursor: pointer;
+  /* Animation: gentle press */
+  transition: transform var(--anim-fast) var(--ease-smooth), box-shadow var(--anim-fast) var(--ease-smooth);
 }
 
 .nav-toggle .bar {
@@ -107,6 +114,8 @@ img {
   border-radius: 10px;
   color: #334155;
   font-weight: 600;
+  /* Animation: subtle color/background only */
+  transition: background var(--anim-fast) var(--ease-smooth), color var(--anim-fast) var(--ease-smooth);
 }
 
 .nav-links a:hover,
@@ -114,6 +123,7 @@ img {
   color: #fff;
   background: linear-gradient(135deg, var(--primary), #20a9e6);
 }
+
 
 .hero {
   padding: 5.2rem 0 4rem;
@@ -131,6 +141,8 @@ img {
   overflow: hidden;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .hero-media img {
@@ -138,6 +150,8 @@ img {
   height: 100%;
   max-height: 430px;
   object-fit: cover;
+  /* Animation: subtle zoom on hover */
+  transition: transform var(--anim-slow) var(--ease-smooth);
 }
 
 .eyebrow {
@@ -177,6 +191,8 @@ img {
   border: 1px solid transparent;
   padding: 0.68rem 1.06rem;
   font-weight: 700;
+  /* Animation: micro interaction */
+  transition: transform var(--anim-fast) var(--ease-smooth), box-shadow var(--anim-fast) var(--ease-smooth), filter var(--anim-fast) var(--ease-smooth);
 }
 
 .btn-primary {
@@ -259,6 +275,8 @@ img {
   border-radius: var(--radius);
   padding: 1.1rem;
   box-shadow: 0 8px 20px rgba(45, 53, 166, 0.1);
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .card h3 {
@@ -309,6 +327,8 @@ img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  /* Animation: soft zoom */
+  transition: transform var(--anim-slow) var(--ease-smooth);
 }
 
 .media-grid {
@@ -322,6 +342,8 @@ img {
   border-radius: 12px;
   height: 160px;
   object-fit: cover;
+  /* Animation: soft zoom */
+  transition: transform var(--anim-slow) var(--ease-smooth);
 }
 
 .rules-grid {
@@ -337,6 +359,8 @@ img {
   border-radius: var(--radius);
   padding: 0.85rem 1rem;
   box-shadow: 0 10px 20px rgba(45, 53, 166, 0.08);
+  /* Animation: gentle emphasis */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .rule-card summary {
@@ -407,10 +431,30 @@ img {
   margin-top: 0.45rem;
   color: var(--primary-dark);
   font-weight: 700;
+  position: relative;
+  /* Animation: underline reveal */
+  transition: color var(--anim-fast) var(--ease-smooth), transform var(--anim-fast) var(--ease-smooth);
 }
 
 .text-link:hover {
   color: var(--accent);
+}
+
+.text-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--anim-fast) var(--ease-smooth);
+}
+
+.text-link:hover::after {
+  transform: scaleX(1);
 }
 
 .facility-list li {
@@ -422,6 +466,8 @@ img {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .feature-media img,
@@ -429,6 +475,8 @@ img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  /* Animation: soft zoom */
+  transition: transform var(--anim-slow) var(--ease-smooth);
 }
 
 .gallery-controls {
@@ -446,6 +494,8 @@ img {
   padding: 0.42rem 0.78rem;
   font-weight: 700;
   cursor: pointer;
+  /* Animation: tap + hover */
+  transition: transform var(--anim-fast) var(--ease-smooth), background var(--anim-fast) var(--ease-smooth), color var(--anim-fast) var(--ease-smooth), border-color var(--anim-fast) var(--ease-smooth);
 }
 
 .filter-btn.active {
@@ -459,6 +509,8 @@ img {
   overflow: hidden;
   border: 1px solid var(--border);
   background: #fff;
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .gallery-item .media {
@@ -469,6 +521,8 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Animation: soft zoom */
+  transition: transform var(--anim-slow) var(--ease-smooth);
 }
 
 .gallery-item .meta {
@@ -495,6 +549,8 @@ img {
   overflow: hidden;
   border: 1px solid #c5ddf8;
   cursor: pointer;
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .campus-slide-track {
@@ -523,6 +579,8 @@ img {
   font-size: 1.15rem;
   font-weight: 700;
   cursor: pointer;
+  /* Animation: hover + press */
+  transition: transform var(--anim-fast) var(--ease-smooth), box-shadow var(--anim-fast) var(--ease-smooth), background var(--anim-fast) var(--ease-smooth);
 }
 
 .campus-dots {
@@ -540,6 +598,8 @@ img {
   border: 0;
   background: #92c8ea;
   cursor: pointer;
+  /* Animation: pulse on active */
+  transition: transform var(--anim-fast) var(--ease-smooth), background var(--anim-fast) var(--ease-smooth);
 }
 
 .campus-dot.active {
@@ -560,12 +620,16 @@ img {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #c5ddf8;
+  /* Animation: hover lift */
+  transition: transform var(--anim-med) var(--ease-smooth), box-shadow var(--anim-med) var(--ease-smooth);
 }
 
 .campus-tile img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  /* Animation: soft zoom */
+  transition: transform var(--anim-slow) var(--ease-smooth);
 }
 
 .contact-wrap {
@@ -727,6 +791,8 @@ textarea {
   position: absolute;
   inset: 0;
   background: rgba(15, 23, 42, 0.64);
+  /* Animation: fade in */
+  animation: modal-fade var(--anim-med) var(--ease-smooth);
 }
 
 .flyer-modal__card {
@@ -739,6 +805,8 @@ textarea {
   border: 1px solid var(--border);
   border-radius: 18px;
   box-shadow: 0 24px 56px rgba(15, 23, 42, 0.32);
+  /* Animation: pop-in */
+  animation: modal-pop var(--anim-med) var(--ease-smooth);
 }
 
 .flyer-modal__image {
@@ -789,6 +857,8 @@ textarea {
   font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
+  /* Animation: tap */
+  transition: transform var(--anim-fast) var(--ease-smooth), box-shadow var(--anim-fast) var(--ease-smooth);
 }
 
 @keyframes rise {
@@ -802,6 +872,89 @@ textarea {
   }
 }
 
+/* Animation: modal entry */
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Interaction states (hover-enabled devices only) */
+@media (hover: hover) {
+  .nav-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(45, 53, 166, 0.14);
+  }
+
+  .nav-links a:hover {
+    transform: none;
+  }
+
+  .hero-media:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(45, 53, 166, 0.18);
+  }
+
+  .hero-media:hover img {
+    transform: scale(1.02);
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(45, 53, 166, 0.18);
+  }
+
+  .card:hover,
+  .rule-card:hover,
+  .gallery-item:hover,
+  .campus-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 28px rgba(45, 53, 166, 0.16);
+  }
+
+  .media-card:hover img,
+  .feature-media:hover img,
+  .profile-media:hover img,
+  .gallery-item:hover .media img,
+  .campus-tile:hover img {
+    transform: scale(1.04);
+  }
+
+  .filter-btn:hover,
+  .campus-nav:hover,
+  .flyer-modal__close:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(45, 53, 166, 0.18);
+  }
+}
+
+/* Animation: pressed state */
+.btn:active,
+.filter-btn:active,
+.campus-nav:active,
+.flyer-modal__close:active,
+.nav-toggle:active {
+  transform: translateY(0);
+}
+
+.campus-dot.active {
+  transform: scale(1.2);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fade-in {
     animation: none;
@@ -811,6 +964,37 @@ textarea {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  /* Respect reduced motion for all added animations */
+  .btn,
+  .nav-toggle,
+  .nav-links a,
+  .hero-media,
+  .hero-media img,
+  .card,
+  .rule-card,
+  .media-card img,
+  .media-grid img,
+  .feature-media,
+  .feature-media img,
+  .profile-media,
+  .profile-media img,
+  .text-link,
+  .filter-btn,
+  .gallery-item,
+  .gallery-item .media img,
+  .campus-slide-window,
+  .campus-nav,
+  .campus-dot,
+  .campus-tile,
+  .campus-tile img,
+  .flyer-modal__backdrop,
+  .flyer-modal__card,
+  .flyer-modal__close,
+  .social-link {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
