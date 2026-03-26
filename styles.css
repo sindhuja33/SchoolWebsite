@@ -780,7 +780,7 @@ textarea {
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.2rem;
 }
 
 .flyer-modal.open {
@@ -798,6 +798,7 @@ textarea {
 .flyer-modal__card {
   position: relative;
   z-index: 1;
+  padding: 1rem;
   width: min(92vw, 760px);
   max-height: 92vh;
   overflow: auto;
@@ -814,10 +815,11 @@ textarea {
   max-height: 76vh;
   object-fit: contain;
   background: #ffffff;
+  display: block;
 }
 
 .flyer-modal__content {
-  padding: 1rem 1.1rem 1.2rem;
+  padding: 1.2rem 1.5rem 1.4rem;
 }
 
 .flyer-modal__content h2 {
@@ -833,6 +835,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  align-items: center;
 }
 
 .flyer-modal__remember {
@@ -840,8 +843,14 @@ textarea {
   align-items: center;
   gap: 0.45rem;
   margin-top: 0.8rem;
+  margin-left: auto;
   font-weight: 600;
   color: var(--muted);
+  white-space: nowrap; 
+}
+
+.flyer-modal__remember input {
+  margin: 0;
 }
 
 .flyer-modal__close {
