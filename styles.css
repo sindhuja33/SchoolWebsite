@@ -964,3 +964,10 @@ h1, h2, h3, h4 {
   height: 300px;        /* control height here */
   object-fit: cover;    /* crops nicely */
 }
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #48b4ea;
+  object-fit: cover;
+}
