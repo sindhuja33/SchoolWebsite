@@ -955,6 +955,12 @@ h1, h2, h3, h4 {
 }
 .gallery-img {
   width: 100%;
+  width: 400px;
   height: 400px;        /* control height here */
+  object-fit: cover;    /* crops nicely */
+}
+.youtube-img {
+  width: 100%;
+  height: 300px;        /* control height here */
   object-fit: cover;    /* crops nicely */
 }

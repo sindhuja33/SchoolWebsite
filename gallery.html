@@ -96,21 +96,24 @@
           <h2>Campus in Motion</h2>
         </div>
       </div>
-      <div class="video-grid">
-        <div class="video-card fade-in">
-          <img src="https://www.youtube.com/watch?v=VfsDKZ2MSqU" alt="Video" />
-          <div class="play"><i class="fa-solid fa-play"></i></div>
-        </div>
-        <div class="video-card fade-in">
-          <img src="https://picsum.photos/seed/video2/600/400" alt="Video" />
-          <div class="play"><i class="fa-solid fa-play"></i></div>
-        </div>
-        <div class="video-card fade-in">
-          <img src="https://picsum.photos/seed/video3/600/400" alt="Video" />
-          <div class="play"><i class="fa-solid fa-play"></i></div>
-        </div>
-      </div>
-    </div>
+    <div class="video-grid">
+
+  <div class="video-card fade-in" onclick="openVideo('https://www.youtube.com/watch?v=VfsDKZ2MSqU')">
+    <img src="./newimages/youtubecover3.png" class="youtube-img"  alt="Video">
+    <div class="play"><i class="fa-solid fa-play"></i></div>
+  </div>
+
+  <div class="video-card fade-in" onclick="openVideo('https://youtu.be/U8jL5sX5oqk?si=NXdR99ySp8unLlsX')">
+    <img src="./newimages/youtubecover2.png" class="youtube-img" alt="Video">
+    <div class="play"><i class="fa-solid fa-play"></i></div>
+  </div>
+
+  <div class="video-card fade-in" onclick="openVideo('https://www.youtube.com/live/m6oEqo4nfwA?si=uBdrvGBv3JwwhX1U')">
+    <img src="./newimages/youtubecover1.png" class="youtube-img"  alt="Video">
+    <div class="play"><i class="fa-solid fa-play"></i></div>
+  </div>
+
+</div>
   </section>
 
   <section class="section">
@@ -179,7 +182,11 @@
     </div>
     <div class="footer-bottom">� 2026 Santhidam Bethania Matriculation School. All rights reserved.</div>
   </footer>
-
+<script>
+function openVideo(url) {
+  window.open(url, '_blank');
+}
+</script>
   <script src="scripts.js"></script>
 </body>
 </html>
