@@ -971,3 +971,13 @@ h1, h2, h3, h4 {
   border: 2px solid #48b4ea;
   object-fit: cover;
 }
+.fac-img {
+  width: 500px;
+  height: 150px;        /* control height here */
+  object-fit: cover;    /* crops nicely */
+}
+.camp-img {
+  width: 600px;
+  height: 400px;        /* control height here */
+  object-fit: cover;    /* crops nicely */
+}
