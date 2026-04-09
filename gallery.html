@@ -1,49 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery Photos | Santhidam Bethania Matriculation School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Santhidam Bethania Matriculation School  Best School in Kanyakumari</title>
+  <meta name="description" content="Browse the SBMS gallery featuring events, sports, academics, cultural activities, and campus infrastructure." />
+  <meta name="keywords" content="SBMS gallery, school events, Kanyakumari school photos" />
+  <link rel="canonical" href="https://santhidambethania.edu/gallery.html" />
+  <meta property="og:title" content="SBMS Gallery" />
+  <meta property="og:description" content="Discover vibrant moments from our campus life." />
+  <meta property="og:image" content="https://picsum.photos/seed/sbms-gallery-og/1200/630" />
+  <meta property="og:url" content="https://santhidambethania.edu/gallery.html" />
+  <meta name="robots" content="index, follow" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body data-page="gallery">
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html"><img class="logo-img" src="images/logo.jpeg" alt="Santhidam Bethania logo" /><span>Santhidam Bethania Matriculation School</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="faculty.html">Faculty</a></li>
-        <li><a href="facilities.html">Facilities</a></li>
-        <li><a class="active" href="galleryMain.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a class="logo" href="index.html"><img class="logo-img" src="images/logo.png" alt="Santhidam Bethania logo" /> <span>SBMS Kanyakumari</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
     </div>
   </header>
 
-  <main class="container page-main">
-    <section class="hero">
-      <a class="back-link" href="galleryMain.html">&larr; Back to Sections</a>
-      <p class="eyebrow">Photo Collection</p>
-      <h1 id="sectionTitle">Gallery Photos</h1>
-      <p id="sectionDescription">All photos in this section.</p>
-    </section>
+  <section class="hero-inner">
+    <div class="container">
+      <h1>Gallery</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Gallery</span>
+      </div>
+    </div>
+  </section>
 
-    <section id="photoGrid" class="photo-grid" aria-label="Section Photos"></section>
-  </main>
+  <section class="section">
+    <div class="container">
+      <div class="gallery-filters filter-btns">
+        <button class="active" data-category="all">All</button>
+        <button data-category="events">Events</button>
+        <button data-category="sports">Sports</button>
+        <button data-category="academics">Academics</button>
+        <button data-category="cultural">Cultural</button>
+        <button data-category="infrastructure">Infrastructure</button>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="events"><img src="./images/christmas/christmas_11.jpg" class="gallery-img" alt="Event" /></div>
+        <div class="gallery-item" data-category="sports"><img src="./newimages/sports/image1.png"  class="gallery-img" alt="Sports" /></div>
+        <div class="gallery-item" data-category="academics"><img src="./newimages/acadamics/academics5.jpeg"  class="gallery-img" alt="Academics" /></div>
+        <div class="gallery-item" data-category="cultural"><img src="./newimages/cultural/trip_6.jpg"  class="gallery-img" alt="Cultural" /></div>
+        <div class="gallery-item" data-category="infrastructure"><img src="./newimages/infra/campus_14.jpg"  class="gallery-img" alt="Infrastructure" /></div>
+        <div class="gallery-item" data-category="sports"><img src="./newimages/sports/image2.png" alt="Sports" class="gallery-img" /></div>
+        <div class="gallery-item" data-category="academics"><img src="./newimages/acadamics/academics1.jpeg" class="gallery-img" alt="Academics" /></div>
+        <div class="gallery-item" data-category="cultural"><img src="./newimages/cultural/trip_2.jpg" class="gallery-img" alt="Cultural" /></div>
+        <div class="gallery-item" data-category="infrastructure"><img src="./newimages/infra/campus_21.jpg" class="gallery-img" alt="Infrastructure" /></div>
+        <div class="gallery-item" data-category="events"><img src="./images/teachers_day/teachers_day_1.jpg" class="gallery-img"  class="gallery-img  " alt="Event" /></div>
+        <div class="gallery-item" data-category="sports"><img src="./newimages/sports/image3.jpeg" class="gallery-img" alt="Sports" /></div>
+        <div class="gallery-item" data-category="academics"><img src="./newimages/acadamics/academics2.jpeg" class="gallery-img" alt="Academics" /></div>
+        <div class="gallery-item" data-category="cultural"><img src="./newimages/cultural/trip_5.jpg" class="gallery-img" alt="Cultural" /></div>
+        <div class="gallery-item" data-category="infrastructure"><img src="./newimages/infra/campus_4.jpg" class="gallery-img" alt="Infrastructure" /></div>
+        <div class="gallery-item" data-category="events"><img src="./images/flower_day/flower_day_3.jpg"  class="gallery-img  " alt="Event" /></div>
+        <div class="gallery-item" data-category="sports"><img src="./newimages/sports/image4.jpeg" class="gallery-img" alt="Sports" /></div>
+        <div class="gallery-item" data-category="academics"><img src="./newimages/acadamics/academics3.jpeg" class="gallery-img" alt="Academics" /></div>
+        <div class="gallery-item" data-category="cultural"><img src="./newimages/cultural/trip_6.jpg" class="gallery-img" alt="Cultural" /></div>
+        <div class="gallery-item" data-category="infrastructure"><img src="./newimages/infra/image2.jpeg"  class="gallery-img" alt="Infrastructure" /></div>
+        <div class="gallery-item" data-category="events"><img src="./images/christmas/christmas_13.jpg" class="gallery-img" class="gallery-img" alt="Event" /></div>    
+        <div class="gallery-item" data-category="academics"><img src="./newimages/acadamics/academics5.jpeg" class="gallery-img" alt="Academics" /></div>
+        <div class="gallery-item" data-category="cultural"><img src="./newimages/cultural/trip_25.jpg" class="gallery-img" alt="Cultural" /></div>
+      </div>
+    </div>
+  </section>
 
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lightboxClose" class="lightbox-close" aria-label="Close slideshow">&times;</button>
-    <button id="lightboxPrev" class="lightbox-nav prev" aria-label="Previous photo">&#10094;</button>
-    <img id="lightboxImage" src="" alt="Slideshow image" />
-    <button id="lightboxNext" class="lightbox-nav next" aria-label="Next photo">&#10095;</button>
+  <div class="lightbox">
+    <button class="close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+    <img src="" alt="Gallery preview" />
+    <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
   </div>
 
-  <script src="script.js"></script>
-  <script src="gallery.js"></script>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <span class="kicker">Video Gallery</span>
+          <h2>Campus in Motion</h2>
+        </div>
+      </div>
+    <div class="video-grid">
+
+  <div class="video-card fade-in" onclick="openVideo('https://www.youtube.com/watch?v=VfsDKZ2MSqU')">
+    <img src="./newimages/youtubecover3.png" class="youtube-img"  alt="Video">
+    <div class="play"><i class="fa-solid fa-play"></i></div>
+  </div>
+
+  <div class="video-card fade-in" onclick="openVideo('https://youtu.be/U8jL5sX5oqk?si=NXdR99ySp8unLlsX')">
+    <img src="./newimages/youtubecover2.png" class="youtube-img" alt="Video">
+    <div class="play"><i class="fa-solid fa-play"></i></div>
+  </div>
+
+  <div class="video-card fade-in" onclick="openVideo('https://www.youtube.com/live/m6oEqo4nfwA?si=uBdrvGBv3JwwhX1U')">
+    <img src="./newimages/youtubecover1.png" class="youtube-img"  alt="Video">
+    <div class="play"><i class="fa-solid fa-play"></i></div>
+  </div>
+
+</div>
+  </section>
+
+ <!-- <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <span class="kicker">Recent Events</span>
+          <h2>Highlights from the Year</h2>
+        </div>
+      </div> 
+      <div class="card-grid">
+        <div class="card event-card fade-in">
+          <span class="date-badge">Feb 12</span>
+          <img src="https://picsum.photos/seed/event1/600/400" alt="Event" />
+          <h3>Science Expo 2025</h3>
+          <p>Students showcased innovation and research projects.</p>
+        </div>
+        <div class="card event-card fade-in">
+          <span class="date-badge">Jan 28</span>
+          <img src="https://picsum.photos/seed/event2/600/400" alt="Event" />
+          <h3>Annual Sports Day</h3>
+          <p>Celebrating team spirit and athletic achievement.</p>
+        </div>
+        <div class="card event-card fade-in">
+          <span class="date-badge">Dec 09</span>
+          <img src="https://picsum.photos/seed/event3/600/400" alt="Event" />
+          <h3>Cultural Fest</h3>
+          <p>Dance, music, and drama performances by students.</p>
+        </div>
+      </div>
+  </div>WILL ADD LATER
+  </section> -->
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>About SBMS</h3>
+        <p>Santhidam Bethania Matriculation School, Kanyakumari nurtures confident learners with strong values and academic excellence.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Kottakarai Road, Kanyakumari District, Tamil Nadu</p>
+        <p>Phone:94865 74925</p>
+        <p>Email: santhidambethania@gmail.com</p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <div class="socials">
+           <a href="https://www.facebook.com/profile.php?id=100010994119330"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/santhidam_bethania_school?igsh=MTNlNjM4YWRkZmxpdA=="><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/@santhidambethaniaschool?si=P-0S_XxdsvloxNRo"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">copyright (c) 2026 GS NexaTech pvt ltd. All rights reserved.</div>
+  </footer>
+<script>
+function openVideo(url) {
+  window.open(url, '_blank');
+}
+</script>
+  <script src="scripts.js"></script>
 </body>
 </html>
+

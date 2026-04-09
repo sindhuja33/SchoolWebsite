@@ -1,112 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Contact Santhidam Bethania Matriculation School for admissions and school enquiries." />
-  <title>Contact | Santhidam Bethania Matriculation School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Santhidam Bethania Matriculation School Best School in Kanyakumari</title>
+  <meta name="description" content="Contact Santhidam Bethania Matriculation School in Kanyakumari. Reach us by phone, email, or visit our campus." />
+  <meta name="keywords" content="SBMS contact, Kanyakumari school address, school phone, school email" />
+  <link rel="canonical" href="https://santhidambethania.edu/contact.html" />
+  <meta property="og:title" content="Contact SBMS" />
+  <meta property="og:description" content="Get in touch with our admissions and academic teams." />
+  <meta property="og:image" content="https://picsum.photos/seed/sbms-contact-og/1200/630" />
+  <meta property="og:url" content="https://santhidambethania.edu/contact.html" />
+  <meta name="robots" content="index, follow" />
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    .success-msg { margin-top:10px; font-weight:600; }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap"><a class="logo" href="index.html"><img class="logo-img" src="images/logo.jpeg"
-          alt="Santhidam Bethania logo" /><span>Santhidam Bethania Matriculation School</span></a><button
-        class="nav-toggle" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false"><span
-          class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="academics.html">Academics</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="faculty.html">Faculty</a></li>
-        <li><a href="facilities.html">Facilities</a></li>
-        <li><a href="galleryMain.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="navbar">
+    <div class="container">
+      <a class="logo" href="index.html"><img class="logo-img" src="images/logo.png" alt="Santhidam Bethania logo" /> <span>SBMS Kanyakumari</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1>Contact Santhidam Bethania Matriculation School</h1>
-        <p>Admissions are open from KG to Grade X. Connect with us for campus visits and admission guidance.</p>
+  <section class="hero-inner">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Contact</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="container contact-wrap">
-        <article class="card">
-          <h3>School Contact Details</h3>
+  <section class="section">
+    <div class="container">
+      <div class="contact-cards">
+        <div class="contact-card fade-in">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Address</h3>
+          <p>Kottakarai Road, Kanyakumari District, Tamil Nadu</p>
+        </div>
+        <div class="contact-card fade-in">
+          <i class="fa-solid fa-phone"></i>
+          <h3>Phone & WhatsApp</h3>
+          <p>8220178039</p>
+        </div>
+        <div class="contact-card fade-in">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>Email</h3>
+          <p>santhidambethania@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <p><strong>School Name:</strong><br>Santhidam Bethania Matriculation School</p>
-          <p><strong>Address:</strong><br>Kanyakumari, Tamil Nadu</p>
-          <p><strong>Phone:</strong> +91 94865 74925</p>
-          <p><strong>Landline:</strong> 04652-247790</p>
-          <p><strong>Email:</strong> santhidambethania@gmail.com</p>
-          <p><strong>Vision:</strong> Educating character and building bridges.</p>
-          <p><strong>Mission:</strong> Going beyond to break barriers through inclusive education.</p>
-          <p><strong>Motto:</strong> Seek the wisdom, ignite the mind, cherish the dream.</p>
-        </article>
-
-        <!-- RIGHT SIDE FORM -->
-        <article class="card">
-          <h3>Send an Enquiry</h3>
-          <div id="msg"></div>
-          <form action="send-mail.php" method="POST" novalidate>
-
-            <label>Full Name</label>
-            <input name="name" type="text" required />
-
-            <label>Email</label>
-            <input name="email" type="email" required />
-
-            <label>Phone</label>
-            <input name="phone" type="tel" required />
-
-            <label>Interested Class</label>
-            <select name="class" required>
-              <option value="">Select class</option>
-              <option>Pre KG</option>
-              <option>LKG/UKG</option>
-              <option>Class 1-5</option>
-              <option>Class 6-8</option>
-              <option>Class 9</option>
+  <section class="section section-alt">
+    <div class="container split">
+      <div>
+        <span class="kicker">Send a Message</span>
+        <h2>Were Here to Help</h2>
+        <form class="form fade-in" id="contactForm">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-row">
+            <input type="tel" name="phone" placeholder="Phone" required>
+            <select name="subject" required>
+              <option value="">Subject</option>
+              <option>Admissions</option>
+              <option>Academics</option>
+              <option>Facilities</option>
+              <option>General</option>
+              <option>Careers</option>
             </select>
-
-            <label>Message</label>
-            <textarea name="message" rows="4" required></textarea>
-
-            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
-
-          </form>
-        </article>
-
+          </div>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button class="btn" type="submit">Submit Message</button>
+          <div id="contactSuccess"></div>
+        </form>
       </div>
-    </section>
+      <div class="map-embed fade-in">
+        <iframe src="https://maps.google.com/maps?q=Kanyakumari%20Tamil%20Nadu&t=&z=13&ie=UTF8&iwloc=&output=embed" title="School Location" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
-  </main>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const msgDiv = document.getElementById("msg");
+  <section class="section">
+    <div class="container split">
+      <div>
+        <span class="kicker">Office Hours</span>
+        <h2>Visit Us</h2>
+        <table class="table">
+          <tr><th>Day</th><th>Time</th></tr>
+          <tr><td>Mon Fri</td><td>8:00 AM 5:00 PM</td></tr>
+          <tr><td>Saturday</td><td>9:00 AM 1:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+      <div>
+        <span class="kicker">Follow Us</span>
+        <h2>Stay Connected</h2>
+        <div class="social-strip">
+          <a href="https://www.facebook.com/profile.php?id=100010994119330"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/santhidam_bethania_school?igsh=MTNlNjM4YWRkZmxpdA=="><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/@santhidambethaniaschool?si=P-0S_XxdsvloxNRo"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  if (params.get("status") === "success") {
-    msgDiv.textContent = "Enquiry sent successfully.";
-    msgDiv.style.color = "green";
-  }
+  <section class="section section-alt">
+    <div class="container">
+      <div class="cta-banner fade-in">
+        <div class="split cta-inner">
+          <div>
+            <h2>Have Questions About Admissions? Were Here to Help</h2>
+            <p>Reach out today and well guide you through the next steps.</p>
+          </div>
+          <div>
+            <a class="btn" href="admissions.html">Admissions Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  if (params.get("status") === "error") {
-    msgDiv.textContent = "Failed to send enquiry. Please try again.";
-    msgDiv.style.color = "red";
-  }
-</script>
+  <a class="whatsapp-float hidden" href="https://wa.me/918220178039" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a class="call-now" href="tel:8220178039">Call Now</a>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>About SBMS</h3>
+        <p>Santhidam Bethania Matriculation School, Kanyakumari nurtures confident learners with strong values and academic excellence.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Kottakarai Road, Kanyakumari District, Tamil Nadu</p>
+        <p>Phone:94865 74925</p>
+        <p>Email: santhidambethania@gmail.com</p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100010994119330"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/santhidam_bethania_school?igsh=MTNlNjM4YWRkZmxpdA=="><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/@santhidambethaniaschool?si=P-0S_XxdsvloxNRo"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">copyright (c) 2026 GS NexaTech pvt ltd. All rights reserved.</div>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
 

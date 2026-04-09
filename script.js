@@ -60,6 +60,7 @@
     }
 
     if (Date.now() >= dismissedUntil) {
+      // Delay flyer on homepage to avoid an abrupt popup
       window.setTimeout(openFlyer, 350);
     }
 
