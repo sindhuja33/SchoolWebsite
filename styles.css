@@ -1002,7 +1002,7 @@ h1, h2, h3, h4 {
 }
 .staf-img {
   width: 500px;
-  height: 250px;        /* control height here */
+  height: 300px;        /* control height here */
   object-fit: cover;    /* crops nicely */
 }
 .about-img {
