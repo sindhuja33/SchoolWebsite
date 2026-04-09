@@ -981,3 +981,13 @@ h1, h2, h3, h4 {
   height: 400px;        /* control height here */
   object-fit: cover;    /* crops nicely */
 }
+.staf-img {
+  width: 500px;
+  height: 250px;        /* control height here */
+  object-fit: cover;    /* crops nicely */
+}
+.about-img {
+  width: 600px;
+  height: 300px;        /* control height here */
+  object-fit: cover;    /* crops nicely */
+}
