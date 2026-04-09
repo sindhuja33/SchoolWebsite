@@ -191,6 +191,27 @@ const facultyFilter = () => {
   });
 };
 
+const initFacultyFlip = () => {
+  const cards = qsa('.faculty-card');
+  if (!cards.length) return;
+
+  const toggleFlip = card => {
+    const group = card.dataset.flipGroup;
+    const targets = group
+      ? qsa(`.faculty-card[data-flip-group="${group}"]`)
+      : [card];
+    const shouldFlip = !card.classList.contains('flipped');
+    targets.forEach(target => target.classList.toggle('flipped', shouldFlip));
+  };
+
+  cards.forEach(card => {
+    card.addEventListener('click', event => {
+      event.preventDefault();
+      toggleFlip(card);
+    });
+  });
+};
+
 const galleryFilter = () => {
   const buttons = qsa('.gallery-filters button');
   const items = qsa('.gallery-item');
@@ -322,6 +343,7 @@ const init = () => {
   accordion();
   contactForm();
   whatsappFloat();
+  initFacultyFlip();
 };
 
 document.addEventListener('DOMContentLoaded', init);
