@@ -1,0 +1,16 @@
+# Santhidam Bethania Matriculation School
+> Co-educational, private unaided Tamil Nadu State Board school in Kanyakumari, est. 2003, serving KG to Secondary.
+
+## Main sections
+- [Home](https://www.santhidambethaniaschool.com/index.html): Overview, admissions, campus highlights
+- [About](https://www.santhidambethaniaschool.com/about.html): History, milestones, awards, management committee
+- [Academics](https://www.santhidambethaniaschool.com/academics.html): KG-Secondary curriculum, subjects, assessment
+- [Admissions](https://www.santhidambethaniaschool.com/admissions.html): Steps, eligibility, fees, dates, FAQs
+- [Facilities](https://www.santhidambethaniaschool.com/facilities.html): Labs, library, sports, safety
+- [Gallery](https://www.santhidambethaniaschool.com/gallery.html): Events, sports, academics, culture
+- [Contact](https://www.santhidambethaniaschool.com/contact.html): Address, phone, email
+
+## Key facts
+- Established 2003
+- Tamil Nadu State Board, co-educational, private unaided
+- Location: Kottakarai Road, Kanyakumari District, Tamil Nadu
